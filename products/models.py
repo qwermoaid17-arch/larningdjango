@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 
 class Product(models.Model):
 
@@ -22,3 +23,13 @@ class Product(models.Model):
         
         verbose_name = 'product'
         ordering = ['name']
+
+class Test(models.Model):
+
+    date = models.DateField()
+    time = models.TimeField(null=True)
+    created = models.DateTimeField(default=datetime.now)
+
+    def __str__(self):
+
+        return 'name'
