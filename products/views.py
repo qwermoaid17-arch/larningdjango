@@ -7,4 +7,4 @@ def product(request):
 
 def products(request):
 
-    return render(request, 'products/products.html', {'prod' : Product.objects.filter(price__lte=600)} )
+    return render(request, 'products/products.html', {'prod' : Product.objects.all().exclude(price__gte=1000)} )

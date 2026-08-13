@@ -19,10 +19,10 @@ class Product(models.Model):
 
         return self.name
 
-    class Meta:
+    # class Meta:
         
-        verbose_name = 'product'
-        ordering = ['name']
+    #     verbose_name = 'product'
+    #     ordering = ['name']
 
 class Test(models.Model):
 
