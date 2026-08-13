@@ -2,13 +2,16 @@
 
 {% block content %}
 
-{% for n in prod %}
-
-    <h1>{{n.name}}</h1>
-    <h1>{{n.content}}</h1>
-    <h1>{{n.price}}</h1>
-    <h1>{{n.image}}</h1>
-
-{% endfor %}
+{%for n in prod%}
+<p>***************</p>
+<p>{{n.id}}</p>
+<p>{{n.name}}</p>
+<p>{{n.content}}</p>
+<p>{{n.price}}</p>
+<p>{{n.image}}</p>
+<p>{{n.condition}}</p>
+<p>{{n.gategory}}</p>
+<p>***************</p>
+{%endfor%}
 
 {% endblock content %}

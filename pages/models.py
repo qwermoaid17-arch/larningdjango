@@ -33,7 +33,7 @@ class User(models.Model):
 
     name = models.CharField(max_length=50)
 
-    prod = models.ForeignKey(Product, max_length=50, on_delete=models.CASCADE)
+    prod = models.ForeignKey(Product, on_delete=models.CASCADE)
 
     def __str__(self):
 
@@ -51,7 +51,7 @@ class username(models.Model):
 
     name = models.CharField(max_length=50)
 
-    vid = models.ManyToManyField(Videw, max_length=50,)
+    vid = models.ManyToManyField(Videw)
 
     def __str__(self):
 
