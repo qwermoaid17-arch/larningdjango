@@ -3,6 +3,7 @@ from django.http import HttpResponse, JsonResponse
 import requests
 import json
 from .models import login
+from .forms import login_form
 
 # Create your views here.
 
@@ -74,4 +75,4 @@ def about(request):
     data=login(username=name, password=password)
     data.save()
 
-    return render(request, 'pages/about.html')
+    return render(request, 'pages/about.html', {'log': login_form})
