@@ -29,7 +29,3 @@ class Test(models.Model):
     date = models.DateField()
     time = models.TimeField(null=True)
     created = models.DateTimeField(default=datetime.now)
-
-    def __str__(self):
-
-        return 'name'

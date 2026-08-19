@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 import requests
 import json
+from .models import login
 
 # Create your views here.
 
@@ -67,5 +68,10 @@ def template(request):
     return render(request, 'pages/template.html', {'name': 'alaa', 'age': 343466543545342350})
 
 def about(request):
+
+    name = request.POST.get('username')
+    password= request.POST.get('password')
+    data=login(username=name, password=password)
+    data.save()
 
     return render(request, 'pages/about.html')
