@@ -1,13 +1,9 @@
 from django import forms
+from .models import login
 
-#larning :
-# label
-# initial
-#disabled
-#help_text
-#widget
-#required
-class login_form(forms.Form):
+class login_form(forms.ModelForm):
 
-    username = forms.CharField(max_length=100, label='Username',initial='user', help_text="enter the user name", required=True )
-    password = forms.CharField(max_length=100, label='Password', disabled=True ,widget=forms.PasswordInput )
+    class Meta:
+        model= login
+        fields='__all__'
+        widgets = {'password': forms.PasswordInput()}
