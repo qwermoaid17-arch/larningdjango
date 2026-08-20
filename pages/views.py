@@ -73,6 +73,5 @@ def about(request):
     name = request.POST.get('username')
     password= request.POST.get('password')
     data=login(username=name, password=password)
-    data.save()
 
     return render(request, 'pages/about.html', {'log': login_form})
