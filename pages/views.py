@@ -66,7 +66,7 @@ def apises(request):
 
 def template(request):
 
-    return render(request, 'pages/template.html', {'name': 'alaa', 'age': 343466543545342350})
+    return render(request, 'pages/template.html', {'name': 'alaa', 'age': 3434665435452350})
 
 def about(request):
 
