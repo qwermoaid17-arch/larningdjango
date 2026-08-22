@@ -84,4 +84,4 @@ def about(request):
     # data=login(username=name, password=password)
     # data.save()
 
-    return render(request, 'pages/about.html', {'log': login_form})
+    return render(request, 'pages/about.html', {'log': form})
