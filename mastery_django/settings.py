@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'pages.apps.SuitConfig',
+    'grappelli',
     'products.apps.ProductsConfig',
     'pages.apps.PagesConfig',
     'django.contrib.admin',
